@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #test1>h4{
+      color: red;
+    }
+    #test1 ul{
+      color: blue;
+    }
+    #test1 ~ #test2{
+      color: aqua;
+    }
+    #test1~h3{
+      color: blue;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>기본 속성 선택자</h2>
+  <p>기본 선택자 뒤에[]를 사용하여 속성과 속성 값을 사용한다.</p>
+  <pre>선택자[속성=값] {설정내용}의 형식으로 사용된다.</pre>
+  <div name="name1" class="div-class">div1</div>
+  <div name="name2" class="div-class">div2</div>
+  <div name="name3" class="div-class">div3</div>
+  <hr>
+
+  <h2>후손 선택자와 자손 선택자</h2>
+  <p>자손 선택자 : | 바로 아래의 요소, 후손 선택자 : 하위 요소 전부</p>
+  <pre>
+    자손 선택자 : 선택자>자손선택자{설정내용;}의 형식으로 사용
+    후손 선택자 : 선택자 후손 선택자{설정내용;}의 형식으로 사용
+  </pre>
+  <div id="test1">
+    나는 div의 text 노드 입니다.
+    <h4 name="test">위의 자손</h4>
+    <h3 id="test2">자손 입니다.</h3>
+    <h2>나도 자손입니다.</h2>
+    <div>
+      <ul>
+        <li>나는 ul의 자손이면서 동시에 div의 후손입니다..</li>
+        <li>나도 ul의 자손이면서 동시에 div의 후손입니다.</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

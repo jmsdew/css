@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      color: blue;
+    }
+    #item1{
+      color: red;
+    }
+    [name="item2"]{
+      color: green;
+    }
+    .item3{
+      color: yellow;
+    }
+    .item4{
+      color: black;
+    }
+    #item4{
+      color: blueviolet !important;  /*!를 쓰면 가장 높은 우선순위, 강제화시켜 권장되지 않음*/
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li id="item1">아이템1</li>
+    <li name="item2">아이템2</li>
+    <li class="item3">아이템3</li>
+    <li style="color: aqua;" id="item4" class="item4">아이템4</li> <!--인라인스타일도 우선순위 매우 높음, 하지만 권장되지 않음-->
+    <li>아이템5</li>
+    <li>아이템6</li>
+    <li>아이템7</li>
+    <li>아이템8</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #test1 :first-child{
+      color: red;
+    }
+    #test1 :last-child{
+      color: aqua;
+    }
+    #test1 :nth-child(2){
+      color: blue;
+    }
+
+    #test2 :last-of-type{
+      color: brown;
+    }
+    #test2 p:nth-last-of-type(3){
+      color: skyblue;
+    }
+    #test3:hover:before{
+      content: "좋은 아침 입니다.";
+      color: red;
+    }
+    #test3:hover{
+      color: blue;
+    }
+    #test3::after{  
+      content: "정민식 입니다.";
+    }
+    #test3:active{
+      color: blueviolet;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>일반 구조 선택자</h2>
+  <p>특정한 위치에 있는 태그 선택(위치로 구분)</p>
+  <div id="test1">   <!--아이디가 중복인 경우 첫번째 아이디만 인식함-->
+    <p>테스트1</p>
+    <p>테스트1</p>
+    <p>테스트1</p>
+    <p>테스트1</p>
+    <p>테스트1</p>
+    <pre>테스트1</pre>
+  </div>
+  <hr>
+  <h2>형태 구조 선택자(태그별로 구분)</h2>
+  <p>특정한 위치에 있는 태그 선택(태그 별로 구분)</p>
+  <div id="test2">
+    <p>테스트1</p>
+    <p>테스트1</p>
+    <p>테스트1</p>
+    <p>테스트1</p>
+    <p>테스트1</p>
+    <pre>테스트1</pre>
+  </div>
+
+  <div id="test3">
+    안녕하세요
+  </div>
+</body>
+</html>
